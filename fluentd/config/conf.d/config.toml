@@ -1,0 +1,10 @@
+[template]
+src = "fluentd.tmpl"
+dest = "/fluentd/etc/fluent.conf"
+keys = [
+    "fluentd/source",
+    "fluentd/filter",
+    "fluentd/match",
+]
+check_cmd = "fluentd -c /fluentd/etc/fluent.conf -p /fluentd/plugins --dry-run"
+reload_cmd = "killall -SIGHUP fluentd"

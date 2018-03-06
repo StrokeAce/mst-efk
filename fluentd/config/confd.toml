@@ -1,0 +1,7 @@
+backend = "consul"
+confdir = "/etc/confd"
+log-level = "info"
+interval = 10
+nodes = [
+  "docker.for.mac.localhost:8500"
+]
